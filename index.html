@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super calculadora</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="root">
+      <!-- <div class="main-top"></div> -->
+      <div class="calculadora-top">
+        <div class="calculadora-name">
+          <h1>SUPERCALCULADORA</h1>
+        </div>
+      </div>
+      <main class="main">
+        <div class="calculadora-body">
+          <div class="value">
+            <div class="form-group">
+              <label for="primerValor">Primer valor</label>
+              <input
+                id="primerValor"
+                name="primerValor"
+                type="text"
+                maxlength="12"
+                onchange="onValorChanged(this)"
+              />
+            </div>
+            <div class="form-group">
+              <label for="segundoValor">Segundo valor</label>
+              <input
+                id="segundoValor"
+                name="segundoValor"
+                type="text"
+                maxlength="12"
+                onchange="onValorChanged(this)"
+              />
+            </div>
+          </div>
+          <div class="operators">
+            <div class="operator">
+              <button onclick="doSumar()">+</button>
+            </div>
+            <div class="operator">
+              <button onclick="doRestar()">-</button>
+            </div>
+            <div class="operator">
+              <button onclick="doMultiplicar()">×</button>
+            </div>
+            <div class="operator">
+              <button onclick="doDividir()">÷</button>
+            </div>
+          </div>
+          <div class="value">
+            <div class="form-group">
+              <label for="resultado">Resultado</label>
+              <div class="resultado">
+                <p id="resultado" name="resultado" style="text-wrap: wrap"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="main-bottom"></div>
+    </div>
+
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

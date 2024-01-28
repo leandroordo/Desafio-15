@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "CalculadoraFont";
+  src: url("./../assets/calculadora-font.woff2") format("woff2");
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  line-height: 1.5;
+}
+
+body {
+  line-height: inherit;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+
+.root {
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 0.5rem;
+  min-height: 100vh;
+}
+
+.main-top {
+  height: 35px;
+  background: #000;
+  border-radius: 10px 10px 0 0 / 30px 30px 0 0;
+}
+
+.main {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  background: #efeeef;
+  background-image: linear-gradient(
+    to right,
+    #9e9492 0 1%,
+    transparent 2.5% 91%,
+    #fff 96% 98.5%,
+    #aaa 99.5% 100%
+  );
+  padding: 10px 40px 10px 20px;
+}
+
+.main-bottom {
+  height: 35px;
+  background: #000;
+  border-radius: 0 0 10px 10px / 0 0 30px 30px;
+}
+
+.calculadora-body {
+  padding: 2rem;
+}
+
+.value {
+  margin-bottom: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+.resultado {
+  width: 100%;
+  background: hsl(190, 20%, 88%);
+  border-radius: 4px;
+  box-shadow: inset 0 0 5px black;
+  color: black;
+  font-family: "CalculadoraFont";
+  letter-spacing: 2px;
+  padding: 8px;
+}
+
+.resultado {
+  border-width: 2px;
+  border-style: inset;
+  border-top-color: black;
+  border-right-color: rgb(118, 118, 118);
+  border-bottom-color: rgb(118, 118, 118);
+  border-left-color: black;
+}
+
+.resultado > p {
+  min-height: 24px;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.operators {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.operator > button {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 38px;
+  height: 30px;
+  margin-bottom: 1rem;
+  background: #62676a;
+  border-right-color: #7c8085;
+  padding-bottom: 2px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 1px 1px 2px #222;
+
+  border-bottom: 2px solid #424246;
+  border-top: 1px solid #7c8085;
+  border-left: 1px solid #4f4239;
+  border-radius: 2px;
+}
+
+.operator > button:active {
+  background: #444;
+  border-top-color: #788;
+  border-right-color: #444;
+  border-bottom: 0;
+}
+
+.error {
+  background-color: #f7a6bdcc !important;
+}
+
+.font-size-1 {
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  padding-top: 3px;
+}
+
+.font-size-2 {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  padding-top: 2px;
+}
+
+.font-size-3 {
+  font-size: 14px;
+  letter-spacing: 1.8px;
+  padding-top: 1px;
+}
+
+.font-size-4 {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.calculadora-top {
+  height: 100px;
+  background: #271923;
+  background-image: linear-gradient(
+      90deg,
+      #71717e 0 1%,
+      #111111 2% 5%,
+      transparent 10% 100%
+    ),
+    linear-gradient(
+      to left,
+      #9094a3 0 1%,
+      #4a4653 1.5% 2%,
+      transparent 2.5% 100%
+    ),
+    linear-gradient(
+      to right,
+      #281b24 0 10%,
+      #443e47 20% 40%,
+      #2d2028 45% 50%,
+      #2e2932 55% 75%,
+      #8c8f9b 85% 100%
+    );
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #aaa;
+  border-radius: 10px 10px 0 0;
+}
+
+.calculadora-name {
+  background: #f7f7f7;
+  background-image: linear-gradient(-300deg, rgb(149, 148, 148), #fff);
+  border-radius: 0 0 4px 4px;
+  max-width: 290px;
+  width: 80%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 1px 1px #2228, -3px -3px 10px #aaa inset;
+}
+
+.calculadora-name > h1 {
+  width: 100%;
+  text-align: center;
+  font-family: "CalculadoraFont";
+  font-size: 12px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  text-shadow: 0.75px 0 0 #0005, -0.75px 0 0 #0005, 0 0.75px 0 #0005,
+    0 -0.75px 0 #0005;
+  overflow: hidden;
+}
+
+.sub-text {
+  font-family: var(--casio-font);
+  text-align: center;
+  font-size: 6px;
+  color: #333;
+  text-shadow: 0 0 2px #888;
+  margin-bottom: 2.5em;
+}
